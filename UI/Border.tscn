@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://ct7163kke0s6c"]
+
+[ext_resource type="Texture2D" uid="uid://42e1ubfwfv5r" path="res://Assets/Borders/border_dw_garden_0.png" id="1_v263n"]
+
+[node name="Control" type="CanvasLayer" unique_id=2123590375]
+
+[node name="BorderDwGarden0" type="Sprite2D" parent="." unique_id=378757428]
+position = Vector2(240, 135)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_v263n")
