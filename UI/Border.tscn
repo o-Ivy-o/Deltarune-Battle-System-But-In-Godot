@@ -1,10 +1,48 @@
 [gd_scene format=3 uid="uid://ct7163kke0s6c"]
 
+[ext_resource type="Script" uid="uid://xox3fv6o3fbq" path="res://Scripts/border.gd" id="1_08uxl"]
 [ext_resource type="Texture2D" uid="uid://42e1ubfwfv5r" path="res://Assets/Borders/border_dw_garden_0.png" id="1_v263n"]
+[ext_resource type="Texture2D" uid="uid://d3bw0b7seq6dr" path="res://Assets/Borders/border_dw_castle_right_0.png" id="2_08uxl"]
+[ext_resource type="Texture2D" uid="uid://dhsom1fboyr7k" path="res://Assets/Borders/border_dw_castle_right_gold_0.png" id="3_jmgox"]
+[ext_resource type="Texture2D" uid="uid://de1qinfa1oml1" path="res://Assets/Borders/border_dw_castle_top_0.png" id="4_03eu1"]
+[ext_resource type="Texture2D" uid="uid://cpreveg0xmqfw" path="res://Assets/Borders/border_dw_pink_alt_0.png" id="6_duxal"]
+[ext_resource type="Texture2D" uid="uid://dhbqdrthfwfxb" path="res://Assets/Borders/border_line_1080_0.png" id="7_x54fy"]
 
 [node name="Control" type="CanvasLayer" unique_id=2123590375]
+script = ExtResource("1_08uxl")
 
-[node name="BorderDwGarden0" type="Sprite2D" parent="." unique_id=378757428]
+[node name="0" type="Sprite2D" parent="." unique_id=716884598]
+visible = false
+position = Vector2(240, 135)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("7_x54fy")
+
+[node name="1" type="Sprite2D" parent="." unique_id=846638464]
+visible = false
+position = Vector2(240, 135)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_08uxl")
+
+[node name="2" type="Sprite2D" parent="." unique_id=468240901]
+visible = false
+position = Vector2(240, 135)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("3_jmgox")
+
+[node name="3" type="Sprite2D" parent="." unique_id=811426506]
+visible = false
+position = Vector2(240, 135)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("4_03eu1")
+
+[node name="4" type="Sprite2D" parent="." unique_id=1438453479]
+visible = false
 position = Vector2(240, 135)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("1_v263n")
+
+[node name="5" type="Sprite2D" parent="." unique_id=260086040]
+visible = false
+position = Vector2(240, 135)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("6_duxal")

@@ -4,27 +4,16 @@
 [ext_resource type="FontFile" uid="uid://bfcv1dehw42d3" path="res://Assets/Fonts/DeterminationMonoWebRegular-Z5oq.ttf" id="2_owi87"]
 [ext_resource type="FontFile" uid="uid://bcrxhig5scr35" path="res://Assets/Fonts/DeterminationSansWebRegular-369X.ttf" id="2_ugbd5"]
 [ext_resource type="AudioStream" uid="uid://c8metllk7gbye" path="res://Assets/Sounds/snd_cantselect.wav" id="4_2fos3"]
+[ext_resource type="Texture2D" uid="uid://djkgdmmyxcoyv" path="res://Assets/Sprites/susiesitting.png" id="4_35jf5"]
 [ext_resource type="AudioStream" uid="uid://cgrdf2wdyoysd" path="res://Assets/Music/mus_options_fall.ogg" id="4_ebc80"]
 [ext_resource type="AudioStream" uid="uid://cekp8j8nhht0" path="res://Assets/Music/menu.ogg" id="4_khn32"]
+[ext_resource type="Texture2D" uid="uid://c125upowgt5al" path="res://Assets/Sprites/noellesitting.png" id="5_5nedb"]
 [ext_resource type="AudioStream" uid="uid://dth0grws7dqd3" path="res://Assets/Sounds/snd_select.wav" id="5_khn32"]
+[ext_resource type="Texture2D" uid="uid://dfltceg2mnpk7" path="res://Assets/Sprites/Krissitting.png" id="6_drj1j"]
 [ext_resource type="AudioStream" uid="uid://4oabeouv8x8f" path="res://Assets/Sounds/snd_menumove.wav" id="6_x7wk2"]
+[ext_resource type="Texture2D" uid="uid://cb7ftjtqc5dqx" path="res://Assets/Sprites/Flowery.png" id="8_drj1j"]
+[ext_resource type="Script" uid="uid://daevc0byf8i65" path="res://Scripts/settings_menu.gd" id="8_rovg4"]
 [ext_resource type="Texture2D" uid="uid://k0tcpdh2alak" path="res://Assets/Sprites/Tobydog.png" id="9_ebc80"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_qsuaf"]
-font = ExtResource("2_ugbd5")
-font_size = 32
-
-[sub_resource type="LabelSettings" id="LabelSettings_s1fef"]
-font = ExtResource("2_owi87")
-
-[sub_resource type="LabelSettings" id="LabelSettings_2fos3"]
-font = ExtResource("2_owi87")
-
-[sub_resource type="LabelSettings" id="LabelSettings_x7wk2"]
-font = ExtResource("2_owi87")
-
-[sub_resource type="LabelSettings" id="LabelSettings_khn32"]
-font = ExtResource("2_owi87")
 
 [sub_resource type="LabelSettings" id="LabelSettings_bowr3"]
 font = ExtResource("2_ugbd5")
@@ -37,10 +26,34 @@ font_size = 32
 [sub_resource type="LabelSettings" id="LabelSettings_745pv"]
 font = ExtResource("2_owi87")
 
+[sub_resource type="LabelSettings" id="LabelSettings_drj1j"]
+font = ExtResource("2_owi87")
+
+[sub_resource type="LabelSettings" id="LabelSettings_rovg4"]
+font = ExtResource("2_owi87")
+
 [sub_resource type="LabelSettings" id="LabelSettings_wb4oo"]
 font = ExtResource("2_owi87")
 
-[node name="Main Menu" type="Control" unique_id=722461253]
+[sub_resource type="LabelSettings" id="LabelSettings_qsuaf"]
+font = ExtResource("2_ugbd5")
+font_size = 32
+
+[sub_resource type="LabelSettings" id="LabelSettings_s1fef"]
+font = ExtResource("2_owi87")
+font_size = 10
+font_color = Color(1, 1, 1, 0.58431375)
+
+[sub_resource type="LabelSettings" id="LabelSettings_2fos3"]
+font = ExtResource("2_owi87")
+
+[sub_resource type="LabelSettings" id="LabelSettings_x7wk2"]
+font = ExtResource("2_owi87")
+
+[sub_resource type="LabelSettings" id="LabelSettings_khn32"]
+font = ExtResource("2_owi87")
+
+[node name="Menu" type="Control" unique_id=722461253]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -49,55 +62,16 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ugbd5")
 
-[node name="Title1" type="Label" parent="." unique_id=731416261]
-visible = false
+[node name="LOADING" type="RichTextLabel" parent="." unique_id=1949216993]
 layout_mode = 0
-offset_left = 89.0
-offset_top = 113.0
-offset_right = 417.0
-offset_bottom = 168.0
-text = "DELTARUNE Battle System"
-label_settings = SubResource("LabelSettings_qsuaf")
-
-[node name="Title2" type="Label" parent="." unique_id=1093909425]
-visible = false
-layout_mode = 0
-offset_left = 180.0
-offset_top = 143.0
-offset_right = 292.0
-offset_bottom = 166.0
-text = "but in godot??"
-label_settings = SubResource("LabelSettings_s1fef")
-
-[node name="Start" type="Label" parent="." unique_id=510479066]
-visible = false
-layout_mode = 0
-offset_left = 208.0
-offset_top = 168.0
-offset_right = 248.0
-offset_bottom = 191.0
-text = "Start"
-label_settings = SubResource("LabelSettings_2fos3")
-
-[node name="Settings" type="Label" parent="." unique_id=1931425304]
-visible = false
-layout_mode = 0
-offset_left = 208.0
-offset_top = 184.0
-offset_right = 272.0
-offset_bottom = 207.0
-text = "Settings"
-label_settings = SubResource("LabelSettings_x7wk2")
-
-[node name="Exit" type="Label" parent="." unique_id=543292933]
-visible = false
-layout_mode = 0
-offset_left = 208.0
-offset_top = 200.0
-offset_right = 272.0
-offset_bottom = 223.0
-text = "Exit"
-label_settings = SubResource("LabelSettings_khn32")
+offset_left = 183.0
+offset_top = 122.0
+offset_right = 420.0
+offset_bottom = 169.0
+theme_override_fonts/normal_font = ExtResource("2_owi87")
+theme_override_font_sizes/normal_font_size = 32
+text = "LOADING"
+scroll_active = false
 
 [node name="Sounds" type="Node" parent="." unique_id=1638276361]
 
@@ -116,16 +90,18 @@ stream = ExtResource("5_khn32")
 [node name="SndMenumove" type="AudioStreamPlayer" parent="Sounds" unique_id=146739677]
 stream = ExtResource("6_x7wk2")
 
-[node name="Settings Menu" type="Node" parent="." unique_id=652469595]
+[node name="Settings Menu" type="Control" parent="." unique_id=1718128019]
+visible = false
+anchors_preset = 0
+script = ExtResource("8_rovg4")
 
 [node name="Tobydog" type="Sprite2D" parent="Settings Menu" unique_id=2091724222]
-visible = false
 position = Vector2(318, 232)
 scale = Vector2(2, 2)
 texture = ExtResource("9_ebc80")
 
 [node name="AUDIO" type="Label" parent="Settings Menu" unique_id=59388908]
-visible = false
+layout_mode = 0
 offset_left = 96.0
 offset_top = 146.0
 offset_right = 156.0
@@ -134,7 +110,7 @@ text = "AUDIO:"
 label_settings = SubResource("LabelSettings_bowr3")
 
 [node name="Title" type="Label" parent="Settings Menu" unique_id=1346250887]
-visible = false
+layout_mode = 0
 offset_left = 173.0
 offset_top = 27.0
 offset_right = 301.0
@@ -143,7 +119,7 @@ text = "SETTINGS"
 label_settings = SubResource("LabelSettings_khhxn")
 
 [node name="BattleSong" type="Label" parent="Settings Menu" unique_id=1963293935]
-visible = false
+layout_mode = 0
 offset_left = 95.0
 offset_top = 182.0
 offset_right = 231.0
@@ -152,25 +128,25 @@ text = "Battle Music: ???"
 label_settings = SubResource("LabelSettings_745pv")
 
 [node name="MusicVol" type="Label" parent="Settings Menu" unique_id=1487796132]
-visible = false
+layout_mode = 0
 offset_left = 95.0
 offset_top = 166.0
 offset_right = 239.0
 offset_bottom = 183.0
 text = "Music Volume: 100%"
-label_settings = SubResource("LabelSettings_745pv")
+label_settings = SubResource("LabelSettings_drj1j")
 
 [node name="Border" type="Label" parent="Settings Menu" unique_id=524815945]
-visible = false
+layout_mode = 0
 offset_left = 95.0
 offset_top = 116.0
 offset_right = 183.0
 offset_bottom = 133.0
 text = "Border: ???"
-label_settings = SubResource("LabelSettings_745pv")
+label_settings = SubResource("LabelSettings_rovg4")
 
 [node name="Exit" type="Label" parent="Settings Menu" unique_id=1773464224]
-visible = false
+layout_mode = 0
 offset_left = 95.0
 offset_top = 66.0
 offset_right = 143.0
@@ -179,10 +155,90 @@ text = "EXIT"
 label_settings = SubResource("LabelSettings_wb4oo")
 
 [node name="VISUAL" type="Label" parent="Settings Menu" unique_id=1325043898]
-visible = false
+layout_mode = 0
 offset_left = 96.0
 offset_top = 96.0
 offset_right = 156.0
 offset_bottom = 113.0
 text = "VISUAL:"
 label_settings = SubResource("LabelSettings_bowr3")
+
+[node name="Take your Time" type="RichTextLabel" parent="Settings Menu" unique_id=194970293]
+layout_mode = 0
+offset_left = 288.0
+offset_top = 146.99998
+offset_right = 358.0
+offset_bottom = 206.99998
+rotation = 0.2617994
+theme_override_colors/default_color = Color(1, 1, 1, 0.5137255)
+theme_override_fonts/normal_font = ExtResource("2_owi87")
+text = "Take your time"
+
+[node name="Main Menu" type="Control" parent="." unique_id=1394740662]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Title1" type="Label" parent="Main Menu" unique_id=731416261]
+layout_mode = 0
+offset_left = 87.0
+offset_top = 73.0
+offset_right = 395.0
+offset_bottom = 128.0
+text = "DELTARUNE Battle System"
+label_settings = SubResource("LabelSettings_qsuaf")
+
+[node name="Title2" type="Label" parent="Main Menu" unique_id=1093909425]
+layout_mode = 0
+offset_left = 311.0
+offset_top = 117.999985
+offset_right = 423.0
+offset_bottom = 136.99998
+rotation = -0.2617994
+text = "but in godot??"
+label_settings = SubResource("LabelSettings_s1fef")
+
+[node name="Start" type="Label" parent="Main Menu" unique_id=510479066]
+layout_mode = 0
+offset_left = 208.0
+offset_top = 132.0
+offset_right = 248.0
+offset_bottom = 155.0
+text = "Start"
+label_settings = SubResource("LabelSettings_2fos3")
+
+[node name="Settings" type="Label" parent="Main Menu" unique_id=1931425304]
+layout_mode = 0
+offset_left = 208.0
+offset_top = 148.0
+offset_right = 272.0
+offset_bottom = 171.0
+text = "Settings"
+label_settings = SubResource("LabelSettings_x7wk2")
+
+[node name="Exit" type="Label" parent="Main Menu" unique_id=543292933]
+layout_mode = 0
+offset_left = 208.0
+offset_top = 164.0
+offset_right = 272.0
+offset_bottom = 187.0
+text = "Exit"
+label_settings = SubResource("LabelSettings_khn32")
+
+[node name="Susiesitting" type="Sprite2D" parent="Main Menu" unique_id=1809607012]
+z_index = 43
+position = Vector2(391, 76)
+texture = ExtResource("4_35jf5")
+
+[node name="Noellesitting" type="Sprite2D" parent="Main Menu" unique_id=1378006390]
+position = Vector2(369, 74)
+texture = ExtResource("5_5nedb")
+
+[node name="Krissitting" type="Sprite2D" parent="Main Menu" unique_id=670515141]
+position = Vector2(97, 63)
+texture = ExtResource("6_drj1j")
+
+[node name="Flowery" type="Sprite2D" parent="Main Menu" unique_id=374681118]
+position = Vector2(103, 227)
+texture = ExtResource("8_drj1j")

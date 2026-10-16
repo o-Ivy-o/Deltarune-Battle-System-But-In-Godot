@@ -1,8 +1,10 @@
 extends Node
 
 var fs : bool = false
-var battletheme : AudioStreamPlayer
-var border : Sprite2D
+var battletheme : int = 0
+var border : int = 0
+var MusicVol = .5
+
 
 func _ready() -> void:
 	var screensize = DisplayServer.window_get_size()
@@ -11,6 +13,10 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
+	if MusicVol > 2:
+		MusicVol = 2
+	elif MusicVol < 0:
+		MusicVol = 0
 	if Input.is_action_just_pressed("fullscreen"):
 		if fs == false:
 			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN)
