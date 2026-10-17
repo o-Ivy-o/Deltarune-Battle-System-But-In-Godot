@@ -8,8 +8,8 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	for child in get_children():
-		child.visible = false
+	for i in get_children():
+		i.visible = false
 	
 	var selectedBorder = Borders.get(Global.border)
 	selectedBorder.visible = true

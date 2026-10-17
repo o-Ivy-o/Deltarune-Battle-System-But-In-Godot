@@ -39,9 +39,14 @@ func load_save():
 		var loadedsettings = save.get_var()
 		save.close()
 		
-		if loadedsettings.b > Global.GlobalMaxBorder:
+		if loadedsettings.b > Global.GlobalMaxBorder or loadedsettings.b < 0:
 			loadedsettings.b = 0
-		
+		if loadedsettings.v > 2:
+			loadedsettings.v = 2
+		elif loadedsettings.v < 0:
+			loadedsettings.v = 0
+		#if loadedsettings.t > Global.MaxBattleTheme:
+			#loadedsettings.t = Global.MaxBattleTheme
 		Global.MusicVol = loadedsettings.v
 		Global.border = loadedsettings.b
 		Global.BattleTheme = loadedsettings.t

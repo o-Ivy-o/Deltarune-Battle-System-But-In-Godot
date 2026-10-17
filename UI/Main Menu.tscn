@@ -63,6 +63,7 @@ BattleSystem = ExtResource("2_rovg4")
 [node name="AudioHandler" parent="." unique_id=2107132292 instance=ExtResource("3_2hlkh")]
 
 [node name="LOADING" type="RichTextLabel" parent="." unique_id=1949216993]
+visible = false
 layout_mode = 0
 offset_left = 183.0
 offset_top = 122.0
@@ -79,7 +80,7 @@ anchors_preset = 0
 script = ExtResource("8_rovg4")
 
 [node name="Tobydog" type="Sprite2D" parent="Settings Menu" unique_id=2091724222]
-position = Vector2(318, 232)
+position = Vector2(369, 232)
 scale = Vector2(2, 2)
 texture = ExtResource("9_ebc80")
 
@@ -148,17 +149,16 @@ label_settings = SubResource("LabelSettings_bowr3")
 
 [node name="Take your Time" type="RichTextLabel" parent="Settings Menu" unique_id=194970293]
 layout_mode = 0
-offset_left = 288.0
-offset_top = 146.99998
-offset_right = 358.0
-offset_bottom = 206.99998
+offset_left = 327.99997
+offset_top = 157.0
+offset_right = 397.99997
+offset_bottom = 217.0
 rotation = 0.2617994
 theme_override_colors/default_color = Color(1, 1, 1, 0.5137255)
 theme_override_fonts/normal_font = ExtResource("2_owi87")
 text = "Take your time"
 
 [node name="Main Menu" type="Control" parent="." unique_id=1394740662]
-visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -169,7 +169,7 @@ offset_left = 87.0
 offset_top = 73.0
 offset_right = 395.0
 offset_bottom = 128.0
-text = "DELTARUNE Battle System"
+text = "UNDERTALE Battle System"
 label_settings = SubResource("LabelSettings_qsuaf")
 
 [node name="Title2" type="Label" parent="Main Menu" unique_id=1093909425]
@@ -210,18 +210,22 @@ text = "Exit"
 label_settings = SubResource("LabelSettings_khn32")
 
 [node name="Susiesitting" type="Sprite2D" parent="Main Menu" unique_id=1809607012]
+visible = false
 z_index = 43
 position = Vector2(391, 76)
 texture = ExtResource("4_35jf5")
 
 [node name="Noellesitting" type="Sprite2D" parent="Main Menu" unique_id=1378006390]
+visible = false
 position = Vector2(369, 74)
 texture = ExtResource("5_5nedb")
 
 [node name="Krissitting" type="Sprite2D" parent="Main Menu" unique_id=670515141]
+visible = false
 position = Vector2(97, 63)
 texture = ExtResource("6_drj1j")
 
 [node name="Flowery" type="Sprite2D" parent="Main Menu" unique_id=374681118]
+visible = false
 position = Vector2(103, 227)
 texture = ExtResource("8_drj1j")

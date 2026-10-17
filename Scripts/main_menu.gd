@@ -10,7 +10,6 @@ var cnmi : bool = true
 
 #when scene gets created
 func _ready() -> void:
-	await get_tree().create_timer(.5).timeout
 	$LOADING.visible = false
 	MenuTheme.play()
 	showmenu()

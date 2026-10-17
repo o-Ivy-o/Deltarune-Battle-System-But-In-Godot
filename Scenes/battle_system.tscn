@@ -575,7 +575,7 @@ position = Vector2(239.74701, 216.99063)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("118_cti0d")
 
-[node name="RichTextLabel" type="Label" parent="BattleBar" unique_id=1888046404]
+[node name="BattleInfo" type="Label" parent="BattleBar" unique_id=1888046404]
 offset_left = -287.7248
 offset_top = -33.63263
 offset_right = 318.87402

@@ -13,7 +13,7 @@ func _process(delta: float) -> void:
 	$BattleSong.label_settings.font_color = Color(Color.WHITE)
 	$MusicVol.text = "Master Volume: " + str(Global.MusicVol)
 	$Border.text = "Border: " + str(Global.BorderName)
-	$BattleSong.text = "Battle Music: " + str(Global.BattleTheme)
+	$BattleSong.text = "Battle Theme: " + str(Global.BattleThemeName)
 	
 	if Input.is_action_just_pressed("Down") and cmi and meni != maxmeni:
 		meni += 1
@@ -43,7 +43,9 @@ func _process(delta: float) -> void:
 				cmi = false
 				adjst = true
 			3:
-				$"../AudioHandler/Sounds/SndCantselect".play()
+				$"../AudioHandler/Sounds/SndSelect".play()
+				cmi = false
+				adjst = true
 	elif Input.is_action_just_pressed("Left") and adjst:
 		
 		match meni:
@@ -60,8 +62,11 @@ func _process(delta: float) -> void:
 				else:
 					$"../AudioHandler/Sounds/SndCantselect".play()
 			3:
-				pass
-				
+				if Global.BattleTheme > 0:
+					Global.BattleTheme -= 1
+					$"../AudioHandler/Sounds/SndMenumove".play()
+				else:
+					$"../AudioHandler/Sounds/SndCantselect".play()
 	elif Input.is_action_just_pressed("Right") and adjst:
 		match meni:
 			1:
@@ -77,7 +82,11 @@ func _process(delta: float) -> void:
 				else:
 					$"../AudioHandler/Sounds/SndCantselect".play()
 			3:
-				pass
+				if Global.BattleTheme < Global.MaxBattleTheme:
+					Global.BattleTheme += 1
+					$"../AudioHandler/Sounds/SndMenumove".play()
+				else:
+					$"../AudioHandler/Sounds/SndCantselect".play()
 	elif Input.is_action_just_pressed("Back") and adjst:
 		adjst = false
 		cmi = true

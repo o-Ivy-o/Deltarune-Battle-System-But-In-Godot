@@ -110,6 +110,8 @@ stream = ExtResource("21_1sj3s")
 
 [node name="Battle" type="AudioStreamPlayer" parent="BattleThemes" unique_id=2031162537]
 stream = ExtResource("22_hfile")
+metadata/ThemeName = "Rude Buster"
 
 [node name="MusBattle1" type="AudioStreamPlayer" parent="BattleThemes" unique_id=1760197369]
 stream = ExtResource("23_6odp6")
+metadata/ThemeName = "Enemy Approaching"
