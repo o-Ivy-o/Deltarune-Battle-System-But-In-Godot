@@ -1,23 +1,17 @@
 extends CanvasLayer
 
+@onready var Borders : Array = get_children()
+
+func _ready() -> void:
+	Global.GlobalMaxBorder = get_child_count() -1
+	print(Global.GlobalMaxBorder)
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	$"0".visible = false
-	$"1".visible = false
-	$"2".visible = false
-	$"3".visible = false
-	$"4".visible = false
-	$"5".visible = false
-	match Global.border:
-		0:
-			$"0".visible = true
-		1:
-			$"1".visible = true
-		2:
-			$"2".visible = true
-		3:
-			$"3".visible = true
-		4:
-			$"4".visible = true
-		5:
-			$"5".visible = true
+	for child in get_children():
+		child.visible = false
+	
+	var selectedBorder = Borders.get(Global.border)
+	selectedBorder.visible = true
+	if selectedBorder.has_meta("BorderName"):
+		Global.BorderName = selectedBorder.get_meta("BorderName")

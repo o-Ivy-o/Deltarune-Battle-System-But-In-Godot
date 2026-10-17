@@ -1,0 +1,115 @@
+[gd_scene format=3 uid="uid://bnn0j1wj3pb1m"]
+
+[ext_resource type="Script" uid="uid://1emscvxf7hd4" path="res://Scripts/sounds.gd" id="1_6y3po"]
+[ext_resource type="AudioStream" uid="uid://c503ptj4aob2w" path="res://Assets/Sounds/snd_break1.wav" id="2_680g8"]
+[ext_resource type="AudioStream" uid="uid://bdv4af0apdtbk" path="res://Assets/Sounds/snd_break2.wav" id="3_81jal"]
+[ext_resource type="AudioStream" uid="uid://c8metllk7gbye" path="res://Assets/Sounds/snd_cantselect.wav" id="4_yjp8e"]
+[ext_resource type="AudioStream" uid="uid://8bn11pnsvdb6" path="res://Assets/Sounds/snd_damage.wav" id="5_lq6ld"]
+[ext_resource type="AudioStream" uid="uid://ogiu6isjg201" path="res://Assets/Sounds/snd_defeatrun.wav" id="6_wo5nc"]
+[ext_resource type="AudioStream" uid="uid://b1ahxv0hk3hem" path="res://Assets/Sounds/snd_graze.wav" id="7_otbtp"]
+[ext_resource type="AudioStream" uid="uid://cd8eq1fvdlk3u" path="res://Assets/Sounds/snd_hurt1.wav" id="8_gtwmr"]
+[ext_resource type="AudioStream" uid="uid://4oabeouv8x8f" path="res://Assets/Sounds/snd_menumove.wav" id="9_fc86s"]
+[ext_resource type="AudioStream" uid="uid://cd4ubli3xev4a" path="res://Assets/Sounds/snd_power.wav" id="10_0eyr5"]
+[ext_resource type="AudioStream" uid="uid://lu85a4uf2dwj" path="res://Assets/Sounds/snd_rudebuster_hit.wav" id="11_damu3"]
+[ext_resource type="AudioStream" uid="uid://cvk4kb01vx70r" path="res://Assets/Sounds/snd_rudebuster_swing.wav" id="12_21moy"]
+[ext_resource type="AudioStream" uid="uid://dth0grws7dqd3" path="res://Assets/Sounds/snd_select.wav" id="13_x684v"]
+[ext_resource type="AudioStream" uid="uid://csvo4bggutgsl" path="res://Assets/Sounds/snd_spare.wav" id="14_kgit7"]
+[ext_resource type="AudioStream" uid="uid://d33icidlvmbj2" path="res://Assets/Sounds/snd_txtnoe.wav" id="15_vce0h"]
+[ext_resource type="AudioStream" uid="uid://doylkb4erxs1u" path="res://Assets/Sounds/snd_weaponpull.wav" id="16_mxah7"]
+[ext_resource type="AudioStream" uid="uid://6ybynma66tq8" path="res://Assets/Music/inukuma_wip.ogg" id="17_i2v87"]
+[ext_resource type="AudioStream" uid="uid://cekp8j8nhht0" path="res://Assets/Music/menu.ogg" id="18_0gbaw"]
+[ext_resource type="AudioStream" uid="uid://cgrdf2wdyoysd" path="res://Assets/Music/mus_options_fall.ogg" id="19_1mp5a"]
+[ext_resource type="AudioStream" uid="uid://bhoe6qcidrw1x" path="res://Assets/Music/mus_options_summer.ogg" id="20_k8afl"]
+[ext_resource type="AudioStream" uid="uid://0w523frmy0vb" path="res://Assets/Music/mus_options_winter.ogg" id="21_1sj3s"]
+[ext_resource type="AudioStream" uid="uid://bwdqpmg3eed62" path="res://Assets/Music/battle.ogg" id="22_hfile"]
+[ext_resource type="AudioStream" uid="uid://dobn1a43ogjmv" path="res://Assets/Music/mus_battle1.ogg" id="23_6odp6"]
+
+[node name="AudioHandler" type="Node2D" unique_id=2107132292]
+script = ExtResource("1_6y3po")
+
+[node name="Sounds" type="Node" parent="." unique_id=302653140]
+
+[node name="SndBreak1" type="AudioStreamPlayer2D" parent="Sounds" unique_id=235104353]
+position = Vector2(75, 70)
+stream = ExtResource("2_680g8")
+
+[node name="SndBreak2" type="AudioStreamPlayer2D" parent="Sounds" unique_id=787194741]
+position = Vector2(75, 70)
+stream = ExtResource("3_81jal")
+
+[node name="SndCantselect" type="AudioStreamPlayer2D" parent="Sounds" unique_id=573402863]
+position = Vector2(75, 70)
+stream = ExtResource("4_yjp8e")
+
+[node name="SndDamage" type="AudioStreamPlayer2D" parent="Sounds" unique_id=494803539]
+position = Vector2(75, 70)
+stream = ExtResource("5_lq6ld")
+
+[node name="SndDefeatrun" type="AudioStreamPlayer2D" parent="Sounds" unique_id=376262323]
+position = Vector2(75, 70)
+stream = ExtResource("6_wo5nc")
+
+[node name="SndGraze" type="AudioStreamPlayer2D" parent="Sounds" unique_id=266899164]
+position = Vector2(75, 70)
+stream = ExtResource("7_otbtp")
+
+[node name="SndHurt1" type="AudioStreamPlayer2D" parent="Sounds" unique_id=1881205139]
+position = Vector2(75, 70)
+stream = ExtResource("8_gtwmr")
+
+[node name="SndMenumove" type="AudioStreamPlayer2D" parent="Sounds" unique_id=1087848292]
+position = Vector2(75, 70)
+stream = ExtResource("9_fc86s")
+
+[node name="SndPower" type="AudioStreamPlayer2D" parent="Sounds" unique_id=1640051946]
+position = Vector2(75, 70)
+stream = ExtResource("10_0eyr5")
+
+[node name="SndRudebusterHit" type="AudioStreamPlayer2D" parent="Sounds" unique_id=1067542545]
+position = Vector2(75, 70)
+stream = ExtResource("11_damu3")
+
+[node name="SndRudebusterSwing" type="AudioStreamPlayer2D" parent="Sounds" unique_id=700313773]
+position = Vector2(75, 70)
+stream = ExtResource("12_21moy")
+
+[node name="SndSelect" type="AudioStreamPlayer2D" parent="Sounds" unique_id=1881756327]
+position = Vector2(75, 70)
+stream = ExtResource("13_x684v")
+
+[node name="SndSpare" type="AudioStreamPlayer2D" parent="Sounds" unique_id=1119834871]
+position = Vector2(75, 70)
+stream = ExtResource("14_kgit7")
+
+[node name="SndTxtnoe" type="AudioStreamPlayer2D" parent="Sounds" unique_id=1607586969]
+position = Vector2(75, 70)
+stream = ExtResource("15_vce0h")
+
+[node name="SndWeaponpull" type="AudioStreamPlayer2D" parent="Sounds" unique_id=885192683]
+position = Vector2(75, 70)
+stream = ExtResource("16_mxah7")
+
+[node name="Music" type="Node" parent="." unique_id=48025430]
+
+[node name="InukumaWip" type="AudioStreamPlayer" parent="Music" unique_id=498604968]
+stream = ExtResource("17_i2v87")
+
+[node name="Menu" type="AudioStreamPlayer" parent="Music" unique_id=1868873361]
+stream = ExtResource("18_0gbaw")
+
+[node name="MusOptionsFall" type="AudioStreamPlayer" parent="Music" unique_id=409792727]
+stream = ExtResource("19_1mp5a")
+
+[node name="MusOptionsSummer" type="AudioStreamPlayer" parent="Music" unique_id=552870113]
+stream = ExtResource("20_k8afl")
+
+[node name="MusOptionsWinter" type="AudioStreamPlayer" parent="Music" unique_id=492356873]
+stream = ExtResource("21_1sj3s")
+
+[node name="BattleThemes" type="Node" parent="." unique_id=1832218537]
+
+[node name="Battle" type="AudioStreamPlayer" parent="BattleThemes" unique_id=2031162537]
+stream = ExtResource("22_hfile")
+
+[node name="MusBattle1" type="AudioStreamPlayer" parent="BattleThemes" unique_id=1760197369]
+stream = ExtResource("23_6odp6")

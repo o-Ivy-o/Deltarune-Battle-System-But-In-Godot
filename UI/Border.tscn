@@ -15,33 +15,39 @@ script = ExtResource("1_08uxl")
 position = Vector2(240, 135)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("7_x54fy")
+metadata/BorderName = "Simple"
 
 [node name="1" type="Sprite2D" parent="." unique_id=846638464]
 visible = false
 position = Vector2(240, 135)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_08uxl")
+metadata/BorderName = "Pink Temple"
 
 [node name="2" type="Sprite2D" parent="." unique_id=468240901]
 visible = false
 position = Vector2(240, 135)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("3_jmgox")
+metadata/BorderName = "Golden Temple"
 
 [node name="3" type="Sprite2D" parent="." unique_id=811426506]
 visible = false
 position = Vector2(240, 135)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("4_03eu1")
+metadata/BorderName = "Castle Top"
 
 [node name="4" type="Sprite2D" parent="." unique_id=1438453479]
 visible = false
 position = Vector2(240, 135)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("1_v263n")
+metadata/BorderName = "Garden"
 
 [node name="5" type="Sprite2D" parent="." unique_id=260086040]
 visible = false
 position = Vector2(240, 135)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("6_duxal")
+metadata/BorderName = "Pink"

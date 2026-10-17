@@ -12,56 +12,70 @@ func _process(delta: float) -> void:
 	$Border.label_settings.font_color = Color(Color.WHITE)
 	$BattleSong.label_settings.font_color = Color(Color.WHITE)
 	$MusicVol.text = "Master Volume: " + str(Global.MusicVol)
-	$Border.text = "Border: " + str(Global.border)
-	$BattleSong.text = "Battle Music: " + str(Global.battletheme)
+	$Border.text = "Border: " + str(Global.BorderName)
+	$BattleSong.text = "Battle Music: " + str(Global.BattleTheme)
 	
 	if Input.is_action_just_pressed("Down") and cmi and meni != maxmeni:
 		meni += 1
-		$"../Sounds/SndMenumove".play()
+		$"../AudioHandler/Sounds/SndMenumove".play()
 		print(meni)
 	elif Input.is_action_just_pressed("Up") and cmi and meni != 0:
 		meni -= 1
-		$"../Sounds/SndMenumove".play()
+		$"../AudioHandler/Sounds/SndMenumove".play()
 		print(meni)
 	elif Input.is_action_just_pressed("Accept") and cmi:
 		match meni:
 			0:
+				SaveManager.save()
 				cmi = false
-				$"../Sounds/SndSelect".play()
+				$"../AudioHandler/Sounds/SndSelect".play()
 				hide()
 				$"../Main Menu".show()
 				$"..".cnmi = true
-				$"../Sounds/MusOptionsFall".stop()
-				$"../Sounds/Menu".stream_paused = false
+				$"../AudioHandler/Music/MusOptionsFall".stop()
+				$"../AudioHandler/Music/Menu".stream_paused = false
 			1:
-				$"../Sounds/SndSelect".play()
+				$"../AudioHandler/Sounds/SndSelect".play()
 				cmi = false
 				adjst = true
 			2:
-				$"../Sounds/SndSelect".play()
+				$"../AudioHandler/Sounds/SndSelect".play()
 				cmi = false
 				adjst = true
 			3:
-				pass
+				$"../AudioHandler/Sounds/SndCantselect".play()
 	elif Input.is_action_just_pressed("Left") and adjst:
+		
 		match meni:
 			1:
 				if Global.border != 0:
 					Global.border -= 1
+					$"../AudioHandler/Sounds/SndMenumove".play()
+				else:
+					$"../AudioHandler/Sounds/SndCantselect".play()
 			2:
-				if Global.MusicVol != 0:
+				if Global.MusicVol > 0.1:
+					$"../AudioHandler/Sounds/SndMenumove".play()
 					Global.MusicVol -= .1
+				else:
+					$"../AudioHandler/Sounds/SndCantselect".play()
 			3:
 				pass
 				
 	elif Input.is_action_just_pressed("Right") and adjst:
 		match meni:
 			1:
-				if Global.border != 6:
+				if Global.border < Global.GlobalMaxBorder:
 					Global.border += 1
+					$"../AudioHandler/Sounds/SndMenumove".play()
+				else:
+					$"../AudioHandler/Sounds/SndCantselect".play()
 			2:
-				if Global.MusicVol != 2:
+				if Global.MusicVol < 2:
 					Global.MusicVol += .1
+					$"../AudioHandler/Sounds/SndMenumove".play()
+				else:
+					$"../AudioHandler/Sounds/SndCantselect".play()
 			3:
 				pass
 	elif Input.is_action_just_pressed("Back") and adjst:

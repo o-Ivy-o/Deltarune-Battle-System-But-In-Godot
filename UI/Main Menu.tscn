@@ -4,14 +4,10 @@
 [ext_resource type="FontFile" uid="uid://bfcv1dehw42d3" path="res://Assets/Fonts/DeterminationMonoWebRegular-Z5oq.ttf" id="2_owi87"]
 [ext_resource type="PackedScene" uid="uid://djquesnsypclm" path="res://Scenes/battle_system.tscn" id="2_rovg4"]
 [ext_resource type="FontFile" uid="uid://bcrxhig5scr35" path="res://Assets/Fonts/DeterminationSansWebRegular-369X.ttf" id="2_ugbd5"]
-[ext_resource type="AudioStream" uid="uid://c8metllk7gbye" path="res://Assets/Sounds/snd_cantselect.wav" id="4_2fos3"]
+[ext_resource type="PackedScene" uid="uid://bnn0j1wj3pb1m" path="res://Scenes/audio_handler.tscn" id="3_2hlkh"]
 [ext_resource type="Texture2D" uid="uid://djkgdmmyxcoyv" path="res://Assets/Sprites/susiesitting.png" id="4_35jf5"]
-[ext_resource type="AudioStream" uid="uid://cgrdf2wdyoysd" path="res://Assets/Music/mus_options_fall.ogg" id="4_ebc80"]
-[ext_resource type="AudioStream" uid="uid://cekp8j8nhht0" path="res://Assets/Music/menu.ogg" id="4_khn32"]
 [ext_resource type="Texture2D" uid="uid://c125upowgt5al" path="res://Assets/Sprites/noellesitting.png" id="5_5nedb"]
-[ext_resource type="AudioStream" uid="uid://dth0grws7dqd3" path="res://Assets/Sounds/snd_select.wav" id="5_khn32"]
 [ext_resource type="Texture2D" uid="uid://dfltceg2mnpk7" path="res://Assets/Sprites/Krissitting.png" id="6_drj1j"]
-[ext_resource type="AudioStream" uid="uid://4oabeouv8x8f" path="res://Assets/Sounds/snd_menumove.wav" id="6_x7wk2"]
 [ext_resource type="Texture2D" uid="uid://cb7ftjtqc5dqx" path="res://Assets/Sprites/Flowery.png" id="8_drj1j"]
 [ext_resource type="Script" uid="uid://daevc0byf8i65" path="res://Scripts/settings_menu.gd" id="8_rovg4"]
 [ext_resource type="Texture2D" uid="uid://k0tcpdh2alak" path="res://Assets/Sprites/Tobydog.png" id="9_ebc80"]
@@ -64,6 +60,8 @@ grow_vertical = 2
 script = ExtResource("1_ugbd5")
 BattleSystem = ExtResource("2_rovg4")
 
+[node name="AudioHandler" parent="." unique_id=2107132292 instance=ExtResource("3_2hlkh")]
+
 [node name="LOADING" type="RichTextLabel" parent="." unique_id=1949216993]
 layout_mode = 0
 offset_left = 183.0
@@ -74,23 +72,6 @@ theme_override_fonts/normal_font = ExtResource("2_owi87")
 theme_override_font_sizes/normal_font_size = 32
 text = "LOADING"
 scroll_active = false
-
-[node name="Sounds" type="Node" parent="." unique_id=1638276361]
-
-[node name="MusOptionsFall" type="AudioStreamPlayer" parent="Sounds" unique_id=375203378]
-stream = ExtResource("4_ebc80")
-
-[node name="Menu" type="AudioStreamPlayer" parent="Sounds" unique_id=1184416950]
-stream = ExtResource("4_khn32")
-
-[node name="SndCantselect" type="AudioStreamPlayer" parent="Sounds" unique_id=1600647185]
-stream = ExtResource("4_2fos3")
-
-[node name="SndSelect" type="AudioStreamPlayer" parent="Sounds" unique_id=55940065]
-stream = ExtResource("5_khn32")
-
-[node name="SndMenumove" type="AudioStreamPlayer" parent="Sounds" unique_id=146739677]
-stream = ExtResource("6_x7wk2")
 
 [node name="Settings Menu" type="Control" parent="." unique_id=1718128019]
 visible = false
