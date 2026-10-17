@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cpreveg0xmqfw"
-path="res://.godot/imported/border_dw_pink_alt_0.png-51b2479b7ef1ddb29088f097f176d337.ctex"
+uid="uid://c1ma5yt4s8e7o"
+path="res://.godot/imported/Special5png.png-8c37ca334490a91f551fa2cc3cdd2bee.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Borders/border_dw_pink_alt_0.png"
-dest_files=["res://.godot/imported/border_dw_pink_alt_0.png-51b2479b7ef1ddb29088f097f176d337.ctex"]
+source_file="res://Assets/Borders/Special5png.png"
+dest_files=["res://.godot/imported/Special5png.png-8c37ca334490a91f551fa2cc3cdd2bee.ctex"]
 
 [params]
 

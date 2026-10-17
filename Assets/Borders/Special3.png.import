@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d3bw0b7seq6dr"
-path="res://.godot/imported/border_dw_castle_right_0.png-27ecd092a54bfc48781f6fdc1a30f55e.ctex"
+uid="uid://lyyo8hnqq4p3"
+path="res://.godot/imported/Special3.png-464609e0c2728ef479fe994be9ca34ac.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Borders/border_dw_castle_right_0.png"
-dest_files=["res://.godot/imported/border_dw_castle_right_0.png-27ecd092a54bfc48781f6fdc1a30f55e.ctex"]
+source_file="res://Assets/Borders/Special3.png"
+dest_files=["res://.godot/imported/Special3.png-464609e0c2728ef479fe994be9ca34ac.ctex"]
 
 [params]
 

@@ -1,6 +1,6 @@
 extends Control
 
-var dialogue : Array = ["Beware of Bugs","Proceed at your own risk"]
+var dialogue : Array = ["      Beware of Bugs"," Proceed at your own risk"]
 var curtxtp = 0
 var mxtxtp = dialogue.size() -1
 var caninteract = true

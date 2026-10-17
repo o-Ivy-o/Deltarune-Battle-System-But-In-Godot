@@ -94,9 +94,6 @@ stream = ExtResource("16_mxah7")
 [node name="InukumaWip" type="AudioStreamPlayer" parent="Music" unique_id=498604968]
 stream = ExtResource("17_i2v87")
 
-[node name="Menu" type="AudioStreamPlayer" parent="Music" unique_id=1868873361]
-stream = ExtResource("18_0gbaw")
-
 [node name="MusOptionsFall" type="AudioStreamPlayer" parent="Music" unique_id=409792727]
 stream = ExtResource("19_1mp5a")
 
@@ -105,6 +102,9 @@ stream = ExtResource("20_k8afl")
 
 [node name="MusOptionsWinter" type="AudioStreamPlayer" parent="Music" unique_id=492356873]
 stream = ExtResource("21_1sj3s")
+
+[node name="Menu" type="AudioStreamPlayer" parent="Music" unique_id=439048066]
+stream = ExtResource("18_0gbaw")
 
 [node name="BattleThemes" type="Node" parent="." unique_id=1832218537]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://42e1ubfwfv5r"
-path="res://.godot/imported/border_dw_garden_0.png-878014d78e5060ddbdc4ce73a8dc4385.ctex"
+uid="uid://duvi3g4yybj5p"
+path="res://.godot/imported/Hotland.png-dd1cbed26954f650d45b7dd58cb38a47.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Borders/border_dw_garden_0.png"
-dest_files=["res://.godot/imported/border_dw_garden_0.png-878014d78e5060ddbdc4ce73a8dc4385.ctex"]
+source_file="res://Assets/Borders/Hotland.png"
+dest_files=["res://.godot/imported/Hotland.png-dd1cbed26954f650d45b7dd58cb38a47.ctex"]
 
 [params]
 

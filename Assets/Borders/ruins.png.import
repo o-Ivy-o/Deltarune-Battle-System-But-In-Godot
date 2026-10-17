@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cr3vqtp33u6iw"
-path="res://.godot/imported/border_dw_pink_0.png-0d2d5d34f104cb8f35757b976ee4cafb.ctex"
+uid="uid://mwmih50wxumu"
+path="res://.godot/imported/ruins.png-58fe09835c7a55841b9bd622963ba705.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Borders/border_dw_pink_0.png"
-dest_files=["res://.godot/imported/border_dw_pink_0.png-0d2d5d34f104cb8f35757b976ee4cafb.ctex"]
+source_file="res://Assets/Borders/ruins.png"
+dest_files=["res://.godot/imported/ruins.png-58fe09835c7a55841b9bd622963ba705.ctex"]
 
 [params]
 
