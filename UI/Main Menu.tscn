@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bxpe82cfwad6a" path="res://Scripts/main_menu.gd" id="1_ugbd5"]
 [ext_resource type="FontFile" uid="uid://bfcv1dehw42d3" path="res://Assets/Fonts/DeterminationMonoWebRegular-Z5oq.ttf" id="2_owi87"]
+[ext_resource type="PackedScene" uid="uid://djquesnsypclm" path="res://Scenes/battle_system.tscn" id="2_rovg4"]
 [ext_resource type="FontFile" uid="uid://bcrxhig5scr35" path="res://Assets/Fonts/DeterminationSansWebRegular-369X.ttf" id="2_ugbd5"]
 [ext_resource type="AudioStream" uid="uid://c8metllk7gbye" path="res://Assets/Sounds/snd_cantselect.wav" id="4_2fos3"]
 [ext_resource type="Texture2D" uid="uid://djkgdmmyxcoyv" path="res://Assets/Sprites/susiesitting.png" id="4_35jf5"]
@@ -61,6 +62,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ugbd5")
+BattleSystem = ExtResource("2_rovg4")
 
 [node name="LOADING" type="RichTextLabel" parent="." unique_id=1949216993]
 layout_mode = 0

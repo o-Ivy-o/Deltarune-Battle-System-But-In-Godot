@@ -10,7 +10,8 @@ func _ready() -> void:
 	var screensize = DisplayServer.window_get_size()
 	DisplayServer.window_set_size(Vector2(screensize.x * 3.5,screensize.y * 3.5))
 	get_window().move_to_center()
-
+	ProjectSettings.set_setting("rendering/environment/defaults/default_clear_color",Color.BLACK)
+	
 
 func _process(delta: float) -> void:
 	if MusicVol > 2:
