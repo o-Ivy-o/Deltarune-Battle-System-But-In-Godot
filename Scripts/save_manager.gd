@@ -4,12 +4,16 @@ const savepath = "user://settings.dat"
 var MusicVol = Global.MusicVol
 var Border = Global.border
 var BattleTheme = Global.BattleTheme
+var Name = Global.PlayerName
+var skipintro = Global.SetName
 
 
 func _process(delta: float) -> void:
 	MusicVol = Global.MusicVol
 	Border = Global.border
 	BattleTheme = Global.BattleTheme
+	Name = Global.PlayerName
+	skipintro = Global.SetName
 
 
 # Called when the node enters the scene tree for the first time.
@@ -22,9 +26,11 @@ func _ready() -> void:
 func save():
 	
 	var settings = {
-		"v" = MusicVol,
-		"b" = Border,
-		"t" = BattleTheme
+		"Name" = Name,
+		"Volume" = MusicVol,
+		"Border" = Border,
+		"Theme" = BattleTheme,
+		"SkipIntro" = skipintro
 	}
 	
 	var save = FileAccess.open(savepath,FileAccess.WRITE)
@@ -39,19 +45,19 @@ func load_save():
 		var loadedsettings = save.get_var()
 		save.close()
 		
-		if loadedsettings.b > Global.GlobalMaxBorder or loadedsettings.b < 0:
-			loadedsettings.b = 0
-		if loadedsettings.v > 2:
-			loadedsettings.v = 2
-		elif loadedsettings.v < 0:
-			loadedsettings.v = 0
+		if loadedsettings.Border > Global.GlobalMaxBorder or loadedsettings.Border < 0:
+			loadedsettings.Border = 0
+		if loadedsettings.Volume > 2:
+			loadedsettings.Volume = 2
+		elif loadedsettings.Volume < 0:
+			loadedsettings.Volume = 0
 		#if loadedsettings.t > Global.MaxBattleTheme:
 			#loadedsettings.t = Global.MaxBattleTheme
-		Global.MusicVol = loadedsettings.v
-		Global.border = loadedsettings.b
-		Global.BattleTheme = loadedsettings.t
+		Global.MusicVol = loadedsettings.Volume
+		Global.border = loadedsettings.Border
+		Global.BattleTheme = loadedsettings.Theme
+		Global.PlayerName = loadedsettings.Name
+		Global.SetName = loadedsettings.SkipIntro
 		print("loaded")
-		print(Global.MusicVol)
-		print(loadedsettings.v)
 	else:
 		print("nosave")

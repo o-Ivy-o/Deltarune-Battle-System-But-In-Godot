@@ -4,7 +4,6 @@ extends CanvasLayer
 
 func _ready() -> void:
 	Global.GlobalMaxBorder = get_child_count() -1
-	print(Global.GlobalMaxBorder)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

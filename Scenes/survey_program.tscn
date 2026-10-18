@@ -5,6 +5,45 @@
 [ext_resource type="PackedScene" uid="uid://bnn0j1wj3pb1m" path="res://Scenes/audio_handler.tscn" id="2_j4ylw"]
 [ext_resource type="FontFile" uid="uid://bfcv1dehw42d3" path="res://Assets/Fonts/DeterminationMonoWebRegular-Z5oq.ttf" id="2_r3uro"]
 [ext_resource type="PackedScene" uid="uid://ct7163kke0s6c" path="res://UI/Border.tscn" id="5_j4ylw"]
+[ext_resource type="Script" uid="uid://1iwxsj2s0hx1" path="res://Scenes/naming_screen.gd" id="6_4r2l8"]
+[ext_resource type="Texture2D" uid="uid://7r0hf6fpfreh" path="res://Assets/Sprites/WhiteTransition.png" id="6_vlqoj"]
+
+[sub_resource type="Animation" id="Animation_kjpfk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("WhiteTransition:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_uauwt"]
+resource_name = "Transition"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("WhiteTransition:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4.9333334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_f2wtj"]
+_data = {
+&"RESET": SubResource("Animation_kjpfk"),
+&"Transition": SubResource("Animation_uauwt")
+}
 
 [node name="Survey Program" type="Control" unique_id=676930365]
 layout_mode = 3
@@ -26,7 +65,6 @@ offset_right = 400.0
 offset_bottom = 165.0
 theme_override_fonts/normal_font = ExtResource("2_r3uro")
 theme_override_font_sizes/normal_font_size = 24
-text = "gwgvgdgdfgd"
 scroll_active = false
 
 [node name="Type" type="Timer" parent="." unique_id=1542099698]
@@ -34,4 +72,345 @@ wait_time = 0.1
 
 [node name="Control" parent="." unique_id=2123590375 instance=ExtResource("5_j4ylw")]
 
+[node name="NamingScreen" type="Control" parent="." unique_id=1456401302]
+visible = false
+anchors_preset = 0
+offset_right = 480.0
+offset_bottom = 270.0
+script = ExtResource("6_4r2l8")
+
+[node name="Name" type="RichTextLabel" parent="NamingScreen" unique_id=644911117]
+layout_mode = 0
+offset_left = 215.0
+offset_top = 67.0
+offset_right = 311.0
+offset_bottom = 107.0
+theme_override_fonts/normal_font = ExtResource("2_r3uro")
+theme_override_font_sizes/normal_font_size = 32
+text = "CHARA"
+scroll_active = false
+
+[node name="Letters" type="Control" parent="NamingScreen" unique_id=1806992028]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Line 1" type="Control" parent="NamingScreen/Letters" unique_id=2129145571]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="A" type="RichTextLabel" parent="NamingScreen/Letters/Line 1" unique_id=985423472]
+layout_mode = 0
+offset_left = 138.0
+offset_top = 117.0
+offset_right = 150.0
+offset_bottom = 141.0
+theme_override_fonts/normal_font = ExtResource("2_r3uro")
+theme_override_font_sizes/normal_font_size = 24
+text = "A"
+scroll_active = false
+
+[node name="B" type="RichTextLabel" parent="NamingScreen/Letters/Line 1" unique_id=1478141419]
+layout_mode = 0
+offset_left = 153.0
+offset_top = 117.0
+offset_right = 166.0
+offset_bottom = 141.0
+theme_override_fonts/normal_font = ExtResource("2_r3uro")
+theme_override_font_sizes/normal_font_size = 24
+text = "B"
+scroll_active = false
+
+[node name="C" type="RichTextLabel" parent="NamingScreen/Letters/Line 1" unique_id=4203231]
+layout_mode = 0
+offset_left = 168.0
+offset_top = 117.0
+offset_right = 181.0
+offset_bottom = 141.0
+theme_override_fonts/normal_font = ExtResource("2_r3uro")
+theme_override_font_sizes/normal_font_size = 24
+text = "C"
+scroll_active = false
+
+[node name="D" type="RichTextLabel" parent="NamingScreen/Letters/Line 1" unique_id=259679099]
+layout_mode = 0
+offset_left = 183.0
+offset_top = 117.0
+offset_right = 195.0
+offset_bottom = 141.0
+theme_override_fonts/normal_font = ExtResource("2_r3uro")
+theme_override_font_sizes/normal_font_size = 24
+text = "D"
+scroll_active = false
+
+[node name="E" type="RichTextLabel" parent="NamingScreen/Letters/Line 1" unique_id=1462688136]
+layout_mode = 0
+offset_left = 198.0
+offset_top = 117.0
+offset_right = 211.0
+offset_bottom = 141.0
+theme_override_fonts/normal_font = ExtResource("2_r3uro")
+theme_override_font_sizes/normal_font_size = 24
+text = "E"
+scroll_active = false
+
+[node name="F" type="RichTextLabel" parent="NamingScreen/Letters/Line 1" unique_id=110179531]
+layout_mode = 0
+offset_left = 213.0
+offset_top = 117.0
+offset_right = 226.0
+offset_bottom = 141.0
+theme_override_fonts/normal_font = ExtResource("2_r3uro")
+theme_override_font_sizes/normal_font_size = 24
+text = "F"
+scroll_active = false
+
+[node name="G" type="RichTextLabel" parent="NamingScreen/Letters/Line 1" unique_id=1234667072]
+layout_mode = 0
+offset_left = 228.0
+offset_top = 117.0
+offset_right = 240.0
+offset_bottom = 141.0
+theme_override_fonts/normal_font = ExtResource("2_r3uro")
+theme_override_font_sizes/normal_font_size = 24
+text = "G"
+scroll_active = false
+
+[node name="H" type="RichTextLabel" parent="NamingScreen/Letters/Line 1" unique_id=1916501503]
+layout_mode = 0
+offset_left = 243.0
+offset_top = 117.0
+offset_right = 256.0
+offset_bottom = 141.0
+theme_override_fonts/normal_font = ExtResource("2_r3uro")
+theme_override_font_sizes/normal_font_size = 24
+text = "H"
+scroll_active = false
+
+[node name="I" type="RichTextLabel" parent="NamingScreen/Letters/Line 1" unique_id=1371832906]
+layout_mode = 0
+offset_left = 258.0
+offset_top = 117.0
+offset_right = 271.0
+offset_bottom = 141.0
+theme_override_fonts/normal_font = ExtResource("2_r3uro")
+theme_override_font_sizes/normal_font_size = 24
+text = "I"
+scroll_active = false
+
+[node name="J" type="RichTextLabel" parent="NamingScreen/Letters/Line 1" unique_id=884654496]
+layout_mode = 0
+offset_left = 273.0
+offset_top = 117.0
+offset_right = 285.0
+offset_bottom = 141.0
+theme_override_fonts/normal_font = ExtResource("2_r3uro")
+theme_override_font_sizes/normal_font_size = 24
+text = "J"
+scroll_active = false
+
+[node name="K" type="RichTextLabel" parent="NamingScreen/Letters/Line 1" unique_id=1510573531]
+layout_mode = 0
+offset_left = 288.0
+offset_top = 117.0
+offset_right = 301.0
+offset_bottom = 141.0
+theme_override_fonts/normal_font = ExtResource("2_r3uro")
+theme_override_font_sizes/normal_font_size = 24
+text = "K"
+scroll_active = false
+
+[node name="L" type="RichTextLabel" parent="NamingScreen/Letters/Line 1" unique_id=837873761]
+layout_mode = 0
+offset_left = 303.0
+offset_top = 117.0
+offset_right = 316.0
+offset_bottom = 141.0
+theme_override_fonts/normal_font = ExtResource("2_r3uro")
+theme_override_font_sizes/normal_font_size = 24
+text = "L"
+scroll_active = false
+
+[node name="M" type="RichTextLabel" parent="NamingScreen/Letters/Line 1" unique_id=459789470]
+layout_mode = 0
+offset_left = 318.0
+offset_top = 117.0
+offset_right = 330.0
+offset_bottom = 141.0
+theme_override_fonts/normal_font = ExtResource("2_r3uro")
+theme_override_font_sizes/normal_font_size = 24
+text = "M"
+scroll_active = false
+
+[node name="N" type="RichTextLabel" parent="NamingScreen/Letters/Line 1" unique_id=669021763]
+layout_mode = 0
+offset_left = 333.0
+offset_top = 117.0
+offset_right = 346.0
+offset_bottom = 141.0
+theme_override_fonts/normal_font = ExtResource("2_r3uro")
+theme_override_font_sizes/normal_font_size = 24
+text = "N"
+scroll_active = false
+
+[node name="Line 2" type="Control" parent="NamingScreen/Letters" unique_id=1076255203]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="O" type="RichTextLabel" parent="NamingScreen/Letters/Line 2" unique_id=885480261]
+layout_mode = 0
+offset_left = 155.0
+offset_top = 137.0
+offset_right = 168.0
+offset_bottom = 161.0
+theme_override_fonts/normal_font = ExtResource("2_r3uro")
+theme_override_font_sizes/normal_font_size = 24
+text = "O"
+scroll_active = false
+
+[node name="P" type="RichTextLabel" parent="NamingScreen/Letters/Line 2" unique_id=1451048777]
+layout_mode = 0
+offset_left = 170.0
+offset_top = 137.0
+offset_right = 182.0
+offset_bottom = 161.0
+theme_override_fonts/normal_font = ExtResource("2_r3uro")
+theme_override_font_sizes/normal_font_size = 24
+text = "P"
+scroll_active = false
+
+[node name="Q" type="RichTextLabel" parent="NamingScreen/Letters/Line 2" unique_id=792853383]
+layout_mode = 0
+offset_left = 185.0
+offset_top = 137.0
+offset_right = 198.0
+offset_bottom = 161.0
+theme_override_fonts/normal_font = ExtResource("2_r3uro")
+theme_override_font_sizes/normal_font_size = 24
+text = "Q"
+scroll_active = false
+
+[node name="R" type="RichTextLabel" parent="NamingScreen/Letters/Line 2" unique_id=381187140]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 137.0
+offset_right = 213.0
+offset_bottom = 161.0
+theme_override_fonts/normal_font = ExtResource("2_r3uro")
+theme_override_font_sizes/normal_font_size = 24
+text = "R"
+scroll_active = false
+
+[node name="S" type="RichTextLabel" parent="NamingScreen/Letters/Line 2" unique_id=863483826]
+layout_mode = 0
+offset_left = 215.0
+offset_top = 137.0
+offset_right = 227.0
+offset_bottom = 161.0
+theme_override_fonts/normal_font = ExtResource("2_r3uro")
+theme_override_font_sizes/normal_font_size = 24
+text = "S"
+scroll_active = false
+
+[node name="T" type="RichTextLabel" parent="NamingScreen/Letters/Line 2" unique_id=635739732]
+layout_mode = 0
+offset_left = 230.0
+offset_top = 137.0
+offset_right = 243.0
+offset_bottom = 161.0
+theme_override_fonts/normal_font = ExtResource("2_r3uro")
+theme_override_font_sizes/normal_font_size = 24
+text = "T"
+scroll_active = false
+
+[node name="U" type="RichTextLabel" parent="NamingScreen/Letters/Line 2" unique_id=1017122695]
+layout_mode = 0
+offset_left = 243.0
+offset_top = 137.0
+offset_right = 256.0
+offset_bottom = 161.0
+theme_override_fonts/normal_font = ExtResource("2_r3uro")
+theme_override_font_sizes/normal_font_size = 24
+text = "U"
+scroll_active = false
+
+[node name="V" type="RichTextLabel" parent="NamingScreen/Letters/Line 2" unique_id=1889853386]
+layout_mode = 0
+offset_left = 258.0
+offset_top = 137.0
+offset_right = 270.0
+offset_bottom = 161.0
+theme_override_fonts/normal_font = ExtResource("2_r3uro")
+theme_override_font_sizes/normal_font_size = 24
+text = "V"
+scroll_active = false
+
+[node name="W" type="RichTextLabel" parent="NamingScreen/Letters/Line 2" unique_id=2047757173]
+layout_mode = 0
+offset_left = 273.0
+offset_top = 137.0
+offset_right = 286.0
+offset_bottom = 161.0
+theme_override_fonts/normal_font = ExtResource("2_r3uro")
+theme_override_font_sizes/normal_font_size = 24
+text = "W"
+scroll_active = false
+
+[node name="X" type="RichTextLabel" parent="NamingScreen/Letters/Line 2" unique_id=1300250931]
+layout_mode = 0
+offset_left = 288.0
+offset_top = 137.0
+offset_right = 301.0
+offset_bottom = 161.0
+theme_override_fonts/normal_font = ExtResource("2_r3uro")
+theme_override_font_sizes/normal_font_size = 24
+text = "X"
+scroll_active = false
+
+[node name="Y" type="RichTextLabel" parent="NamingScreen/Letters/Line 2" unique_id=492915032]
+layout_mode = 0
+offset_left = 303.0
+offset_top = 137.0
+offset_right = 315.0
+offset_bottom = 161.0
+theme_override_fonts/normal_font = ExtResource("2_r3uro")
+theme_override_font_sizes/normal_font_size = 24
+text = "Y"
+scroll_active = false
+
+[node name="Z" type="RichTextLabel" parent="NamingScreen/Letters/Line 2" unique_id=1143261449]
+layout_mode = 0
+offset_left = 318.0
+offset_top = 137.0
+offset_right = 331.0
+offset_bottom = 161.0
+theme_override_fonts/normal_font = ExtResource("2_r3uro")
+theme_override_font_sizes/normal_font_size = 24
+text = "Z"
+scroll_active = false
+
+[node name="RichTextLabel" type="RichTextLabel" parent="NamingScreen" unique_id=88896843]
+layout_mode = 0
+offset_left = 59.0
+offset_top = 216.0
+offset_right = 342.0
+offset_bottom = 288.0
+theme_override_fonts/normal_font = ExtResource("2_r3uro")
+theme_override_font_sizes/normal_font_size = 12
+text = "	Press Z To Add a Letter.
+	Press X To Remove a Letter.
+	Press C To Confirm Name."
+
+[node name="Transition" type="AnimationPlayer" parent="." unique_id=1262109995]
+libraries/ = SubResource("AnimationLibrary_f2wtj")
+
+[node name="WhiteTransition" type="Sprite2D" parent="." unique_id=1439419108]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(241, 134)
+scale = Vector2(16.4, 12.4)
+texture = ExtResource("6_vlqoj")
+
 [connection signal="timeout" from="Type" to="." method="_on_type_timeout"]
+[connection signal="animation_finished" from="Transition" to="." method="_on_transition_animation_finished"]

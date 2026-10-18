@@ -5,9 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://djquesnsypclm" path="res://Scenes/battle_system.tscn" id="2_rovg4"]
 [ext_resource type="FontFile" uid="uid://bcrxhig5scr35" path="res://Assets/Fonts/DeterminationSansWebRegular-369X.ttf" id="2_ugbd5"]
 [ext_resource type="PackedScene" uid="uid://bnn0j1wj3pb1m" path="res://Scenes/audio_handler.tscn" id="3_2hlkh"]
+[ext_resource type="Texture2D" uid="uid://dld152l58et2c" path="res://Assets/Sprites/mewtree.png" id="8_745pv"]
 [ext_resource type="Texture2D" uid="uid://cb7ftjtqc5dqx" path="res://Assets/Sprites/Flowery.png" id="8_drj1j"]
 [ext_resource type="Script" uid="uid://daevc0byf8i65" path="res://Scripts/settings_menu.gd" id="8_rovg4"]
-[ext_resource type="PackedScene" uid="uid://ct7163kke0s6c" path="res://UI/Border.tscn" id="9_745pv"]
 [ext_resource type="Texture2D" uid="uid://k0tcpdh2alak" path="res://Assets/Sprites/Tobydog.png" id="9_ebc80"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_bowr3"]
@@ -163,6 +163,10 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
+[node name="Mewtree" type="Sprite2D" parent="Main Menu" unique_id=1947934187]
+position = Vector2(350, 211)
+texture = ExtResource("8_745pv")
+
 [node name="Title1" type="Label" parent="Main Menu" unique_id=731416261]
 layout_mode = 0
 offset_left = 87.0
@@ -213,5 +217,3 @@ label_settings = SubResource("LabelSettings_khn32")
 visible = false
 position = Vector2(103, 227)
 texture = ExtResource("8_drj1j")
-
-[node name="Control" parent="." unique_id=2123590375 instance=ExtResource("9_745pv")]

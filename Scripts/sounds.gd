@@ -12,7 +12,6 @@ func _process(delta: float) -> void:
 			s.volume_linear = Global.MusicVol
 	
 	Global.MaxBattleTheme = $BattleThemes.get_child_count() -1
-	print(Global.MaxBattleTheme)
 	
 	Global.BattleThemeName = BattleThemes.get(Global.BattleTheme).get_meta("ThemeName")
 	
