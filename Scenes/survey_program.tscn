@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://ct7163kke0s6c" path="res://UI/Border.tscn" id="5_j4ylw"]
 [ext_resource type="Script" uid="uid://1iwxsj2s0hx1" path="res://Scenes/naming_screen.gd" id="6_4r2l8"]
 [ext_resource type="Texture2D" uid="uid://7r0hf6fpfreh" path="res://Assets/Sprites/WhiteTransition.png" id="6_vlqoj"]
+[ext_resource type="Texture2D" uid="uid://d1phpcd2f5dm3" path="res://Assets/Sprites/FRIH.png" id="7_mdy8p"]
 [ext_resource type="Texture2D" uid="uid://cgwve1akl0mo0" path="res://Assets/Sprites/Light.png" id="8_uauwt"]
 [ext_resource type="Texture2D" uid="uid://bcnn3p3n2gbo6" path="res://Assets/Sprites/Soul.png" id="9_f2wtj"]
 [ext_resource type="AudioStream" uid="uid://8vujrci3v4cs" path="res://Assets/Sounds/snd_spearappear.wav" id="10_6xsjm"]
@@ -22,7 +23,7 @@ markers = [{
 }, {
 "color": Color(0.7734375, 0.063446045, 0.063446045, 1),
 "name": &"SoulEnter",
-"time": 1.32
+"time": 1.4
 }]
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -55,10 +56,10 @@ tracks/2/path = NodePath("Soul:modulate")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.87, 1.03, 1.2333333),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0.87, 1.03, 1.2333333, 1.37),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.24313726), Color(1, 1, 1, 1)]
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.24313726), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -95,6 +96,30 @@ tracks/5/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Frih:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(234, 98.795), Vector2(234, 206.52)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Frih:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_mdy8p"]
@@ -135,7 +160,31 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(234, 208), Vector2(234, 208.885)]
+"values": [Vector2(239.96, 202.88), Vector2(239.96, 206.265)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Soul:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.14117648)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Frih:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(234, 205.335), Vector2(234, 206.435)]
 }
 
 [sub_resource type="Animation" id="Animation_kjpfk"]
@@ -236,6 +285,30 @@ tracks/7/keys = {
 "update": 0,
 "values": [Vector2(234, 208)]
 }
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Frih:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(234, 98.795)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Frih:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_uauwt"]
 resource_name = "Transition"
@@ -278,7 +351,7 @@ layout_mode = 0
 offset_left = 81.0
 offset_top = 104.0
 offset_right = 400.0
-offset_bottom = 164.99213
+offset_bottom = 164.9923
 theme_override_fonts/normal_font = ExtResource("2_r3uro")
 theme_override_font_sizes/normal_font_size = 24
 text = "   Excellent we shall now
@@ -295,6 +368,12 @@ modulate = Color(1, 1, 1, 0)
 position = Vector2(233.99998, 179.5)
 scale = Vector2(0.7235294, 1.1749998)
 texture = ExtResource("8_uauwt")
+
+[node name="Frih" type="Sprite2D" parent="." unique_id=801007192]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(234, 98.795)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("7_mdy8p")
 
 [node name="Soul" type="Sprite2D" parent="." unique_id=1492284789]
 modulate = Color(1, 1, 1, 0)
@@ -644,7 +723,7 @@ stream = ExtResource("11_mdy8p")
 
 [node name="WhiteTransition" type="Sprite2D" parent="." unique_id=1439419108]
 modulate = Color(1, 1, 1, 0)
-position = Vector2(241, 134)
+position = Vector2(240.99998, 132.00002)
 scale = Vector2(16.4, 12.4)
 texture = ExtResource("6_vlqoj")
 
