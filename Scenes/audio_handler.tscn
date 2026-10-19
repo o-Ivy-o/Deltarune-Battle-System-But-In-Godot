@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bnn0j1wj3pb1m"]
 
 [ext_resource type="Script" uid="uid://1emscvxf7hd4" path="res://Scripts/sounds.gd" id="1_6y3po"]
+[ext_resource type="AudioStream" uid="uid://cbudqr3xsal6o" path="res://Assets/Sounds/snd_txtivy.ogg" id="2_81jal"]
 [ext_resource type="AudioStream" uid="uid://c503ptj4aob2w" path="res://Assets/Sounds/snd_break1.wav" id="2_680g8"]
 [ext_resource type="AudioStream" uid="uid://bdv4af0apdtbk" path="res://Assets/Sounds/snd_break2.wav" id="3_81jal"]
 [ext_resource type="AudioStream" uid="uid://c8metllk7gbye" path="res://Assets/Sounds/snd_cantselect.wav" id="4_yjp8e"]
@@ -16,6 +17,7 @@
 [ext_resource type="AudioStream" uid="uid://csvo4bggutgsl" path="res://Assets/Sounds/snd_spare.wav" id="14_kgit7"]
 [ext_resource type="AudioStream" uid="uid://d33icidlvmbj2" path="res://Assets/Sounds/snd_txtnoe.wav" id="15_vce0h"]
 [ext_resource type="AudioStream" uid="uid://doylkb4erxs1u" path="res://Assets/Sounds/snd_weaponpull.wav" id="16_mxah7"]
+[ext_resource type="AudioStream" uid="uid://d3b72xvdkqd2h" path="res://Assets/Music/AUDIO_ANOTHERHIM.ogg" id="17_680g8"]
 [ext_resource type="AudioStream" uid="uid://6ybynma66tq8" path="res://Assets/Music/inukuma_wip.ogg" id="17_i2v87"]
 [ext_resource type="AudioStream" uid="uid://cekp8j8nhht0" path="res://Assets/Music/menu.ogg" id="18_0gbaw"]
 [ext_resource type="AudioStream" uid="uid://cgrdf2wdyoysd" path="res://Assets/Music/mus_options_fall.ogg" id="19_1mp5a"]
@@ -28,6 +30,9 @@
 script = ExtResource("1_6y3po")
 
 [node name="Sounds" type="Node" parent="." unique_id=302653140]
+
+[node name="SndTxtivy" type="AudioStreamPlayer" parent="Sounds" unique_id=1868157100]
+stream = ExtResource("2_81jal")
 
 [node name="SndBreak1" type="AudioStreamPlayer2D" parent="Sounds" unique_id=235104353]
 position = Vector2(75, 70)
@@ -90,6 +95,11 @@ position = Vector2(75, 70)
 stream = ExtResource("16_mxah7")
 
 [node name="Music" type="Node" parent="." unique_id=48025430]
+
+[node name="AudioAnotherhim" type="AudioStreamPlayer" parent="Music" unique_id=1231292703]
+stream = ExtResource("17_680g8")
+pitch_scale = 0.65
+parameters/looping = true
 
 [node name="InukumaWip" type="AudioStreamPlayer" parent="Music" unique_id=498604968]
 stream = ExtResource("17_i2v87")

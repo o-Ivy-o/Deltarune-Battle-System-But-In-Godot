@@ -57,7 +57,7 @@ func load_save():
 		Global.border = loadedsettings.Border
 		Global.BattleTheme = loadedsettings.Theme
 		Global.PlayerName = loadedsettings.Name
-		Global.SetName = loadedsettings.SkipIntro
+		Global.SetName = false
 		print("loaded")
 	else:
 		print("nosave")

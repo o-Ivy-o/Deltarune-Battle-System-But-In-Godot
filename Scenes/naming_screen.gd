@@ -4,6 +4,7 @@ extends Control
 var lidx = 0
 var lidy = 0
 @export var cmi : bool = false
+var playedsound = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -81,8 +82,17 @@ func _process(delta: float) -> void:
 			name = name.substr(0, name.length() - 1)
 			$Name.text = name
 	elif Input.is_action_just_pressed("ConfirmName") and cmi:
-		cmi = false
-		$"../Transition".play("Transition")
-		Global.PlayerName = $Name.text
-		Global.SetName = true
+		if $Name.text != "":
+			cmi = false
+			$"../Transition".play_backwards("FriskAppear")
+			$"../Text".visible = true
+			$"../".caninteract = true
+			$"../".curtxtp += 1
+			$"../".nextpage()
+			Global.PlayerName = $Name.text
+			Global.SetName = true
+			$".".visible = false
+		else:
+			$"../AudioHandler/Sounds/SndCantselect".play()
+		
 		

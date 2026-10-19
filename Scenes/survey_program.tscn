@@ -7,6 +7,136 @@
 [ext_resource type="PackedScene" uid="uid://ct7163kke0s6c" path="res://UI/Border.tscn" id="5_j4ylw"]
 [ext_resource type="Script" uid="uid://1iwxsj2s0hx1" path="res://Scenes/naming_screen.gd" id="6_4r2l8"]
 [ext_resource type="Texture2D" uid="uid://7r0hf6fpfreh" path="res://Assets/Sprites/WhiteTransition.png" id="6_vlqoj"]
+[ext_resource type="Texture2D" uid="uid://cgwve1akl0mo0" path="res://Assets/Sprites/Light.png" id="8_uauwt"]
+[ext_resource type="Texture2D" uid="uid://bcnn3p3n2gbo6" path="res://Assets/Sprites/Soul.png" id="9_f2wtj"]
+[ext_resource type="AudioStream" uid="uid://8vujrci3v4cs" path="res://Assets/Sounds/snd_spearappear.wav" id="10_6xsjm"]
+[ext_resource type="AudioStream" uid="uid://dmm1t7ammabry" path="res://Assets/Sounds/snd_grab.wav" id="11_mdy8p"]
+
+[sub_resource type="Animation" id="Animation_6xsjm"]
+resource_name = "FriskAppear"
+length = 2.5333333
+markers = [{
+"color": Color(1, 0, 0, 1),
+"name": &"SoulAppear",
+"time": 1.0
+}, {
+"color": Color(0.7734375, 0.063446045, 0.063446045, 1),
+"name": &"SoulEnter",
+"time": 1.32
+}]
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Text:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.56666666),
+"transitions": PackedFloat32Array(3.3636124, 0.08838832),
+"update": 0,
+"values": [Vector2(81, 104), Vector2(81, 46.08)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Light:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.75, 1.0666667, 1.4, 1.7333333, 2.1, 2.4333334),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 0.18431373), Color(1, 1, 1, 0.40784314), Color(1, 1, 1, 0.5176471), Color(1, 1, 1, 0.40784314), Color(1, 1, 1, 0.60784316)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Soul:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.87, 1.03, 1.2333333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.24313726), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Soul:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.0333333, 1.2333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(3, 3), Vector2(0.75, 0.75)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SndSpearappear:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.76666665),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("SndGrab:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(1.37),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_mdy8p"]
+resource_name = "FriskIdle"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Light:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.0666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.36862746), Color(1, 1, 1, 0.4627451)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Soul:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.75, 0.75)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Soul:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(234, 208), Vector2(234, 208.885)]
+}
 
 [sub_resource type="Animation" id="Animation_kjpfk"]
 length = 0.001
@@ -21,6 +151,90 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Text:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(81, 104)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Light:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Soul:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Soul:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2, 2)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("SndSpearappear:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("SndGrab:playing")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Soul:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(234, 208)]
 }
 
 [sub_resource type="Animation" id="Animation_uauwt"]
@@ -41,6 +255,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_f2wtj"]
 _data = {
+&"FriskAppear": SubResource("Animation_6xsjm"),
+&"FriskIdle": SubResource("Animation_mdy8p"),
 &"RESET": SubResource("Animation_kjpfk"),
 &"Transition": SubResource("Animation_uauwt")
 }
@@ -62,15 +278,29 @@ layout_mode = 0
 offset_left = 81.0
 offset_top = 104.0
 offset_right = 400.0
-offset_bottom = 165.0
+offset_bottom = 164.99213
 theme_override_fonts/normal_font = ExtResource("2_r3uro")
 theme_override_font_sizes/normal_font_size = 24
+text = "   Excellent we shall now
+		   BEGIN"
 scroll_active = false
 
 [node name="Type" type="Timer" parent="." unique_id=1542099698]
 wait_time = 0.1
 
 [node name="Control" parent="." unique_id=2123590375 instance=ExtResource("5_j4ylw")]
+
+[node name="Light" type="Sprite2D" parent="." unique_id=699835871]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(233.99998, 179.5)
+scale = Vector2(0.7235294, 1.1749998)
+texture = ExtResource("8_uauwt")
+
+[node name="Soul" type="Sprite2D" parent="." unique_id=1492284789]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(234, 208)
+scale = Vector2(2, 2)
+texture = ExtResource("9_f2wtj")
 
 [node name="NamingScreen" type="Control" parent="." unique_id=1456401302]
 visible = false
@@ -405,6 +635,12 @@ text = "	Press Z To Add a Letter.
 
 [node name="Transition" type="AnimationPlayer" parent="." unique_id=1262109995]
 libraries/ = SubResource("AnimationLibrary_f2wtj")
+
+[node name="SndSpearappear" type="AudioStreamPlayer" parent="." unique_id=248544621]
+stream = ExtResource("10_6xsjm")
+
+[node name="SndGrab" type="AudioStreamPlayer" parent="." unique_id=1742856988]
+stream = ExtResource("11_mdy8p")
 
 [node name="WhiteTransition" type="Sprite2D" parent="." unique_id=1439419108]
 modulate = Color(1, 1, 1, 0)
