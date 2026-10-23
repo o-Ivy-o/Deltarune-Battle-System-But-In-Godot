@@ -6,7 +6,7 @@ func _ready() -> void:
 	Global.GlobalMaxBorder = get_child_count() -1
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	for i in get_children():
 		i.visible = false
 	

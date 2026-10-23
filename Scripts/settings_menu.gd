@@ -6,7 +6,7 @@ const maxmeni = 3
 var adjst = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	$Exit.label_settings.font_color = Color(Color.WHITE)
 	$MusicVol.label_settings.font_color = Color(Color.WHITE)
 	$Border.label_settings.font_color = Color(Color.WHITE)

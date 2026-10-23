@@ -15,7 +15,7 @@
 
 [sub_resource type="Animation" id="Animation_6xsjm"]
 resource_name = "FriskAppear"
-length = 2.5333333
+length = 1.4333333
 markers = [{
 "color": Color(1, 0, 0, 1),
 "name": &"SoulAppear",
@@ -148,11 +148,11 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(0.75, 0.75)]
+"values": [Vector2(1.25, 1.25)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
-tracks/2/enabled = true
+tracks/2/enabled = false
 tracks/2/path = NodePath("Soul:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
@@ -169,10 +169,10 @@ tracks/3/path = NodePath("Soul:modulate")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0),
+"times": PackedFloat32Array(-0.033333335),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(1, 1, 1, 0.14117648)]
+"values": [Color(1, 1, 1, 0.89411765)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -251,7 +251,7 @@ tracks/4/keys = {
 }
 tracks/5/type = "value"
 tracks/5/imported = false
-tracks/5/enabled = true
+tracks/5/enabled = false
 tracks/5/path = NodePath("SndSpearappear:playing")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
@@ -263,7 +263,7 @@ tracks/5/keys = {
 }
 tracks/6/type = "value"
 tracks/6/imported = false
-tracks/6/enabled = true
+tracks/6/enabled = false
 tracks/6/path = NodePath("SndGrab:playing")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
@@ -351,7 +351,7 @@ layout_mode = 0
 offset_left = 81.0
 offset_top = 104.0
 offset_right = 400.0
-offset_bottom = 164.9923
+offset_bottom = 164.99228
 theme_override_fonts/normal_font = ExtResource("2_r3uro")
 theme_override_font_sizes/normal_font_size = 24
 text = "   Excellent we shall now
@@ -365,8 +365,8 @@ wait_time = 0.1
 
 [node name="Light" type="Sprite2D" parent="." unique_id=699835871]
 modulate = Color(1, 1, 1, 0)
-position = Vector2(233.99998, 179.5)
-scale = Vector2(0.7235294, 1.1749998)
+position = Vector2(233.99998, 132.5)
+scale = Vector2(0.7235294, 1.9583334)
 texture = ExtResource("8_uauwt")
 
 [node name="Frih" type="Sprite2D" parent="." unique_id=801007192]
@@ -384,6 +384,7 @@ texture = ExtResource("9_f2wtj")
 [node name="NamingScreen" type="Control" parent="." unique_id=1456401302]
 visible = false
 anchors_preset = 0
+offset_left = -1.5258789e-05
 offset_right = 480.0
 offset_bottom = 270.0
 script = ExtResource("6_4r2l8")

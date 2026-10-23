@@ -28,7 +28,7 @@ func nextpage():
 	$Type.start()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	dialogue = ["       Hello Player.\n      Before we Begin.","  Please name the fallen\n          Human.","         Perfect.","      We Called Them:\n           "+nametxt.text,"   Excellent we shall now
 		   BEGIN"]
 	mxtxtp = dialogue.size() -1
@@ -56,7 +56,7 @@ func _on_type_timeout() -> void:
 		
 	if $Text.visible_characters < totalchar:
 		$Text.visible_characters += 1
-		$AudioHandler/Sounds/SndTxtivy.pitch_scale = randf_range(1.25, 1.30)
+		$AudioHandler/Sounds/SndTxtivy.pitch_scale = randf_range(0.85, 1.15)
 		$AudioHandler/Sounds/SndTxtivy.play()
 		
 	if $Text.visible_characters >= totalchar:

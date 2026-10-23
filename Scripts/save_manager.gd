@@ -8,7 +8,7 @@ var Name = Global.PlayerName
 var skipintro = Global.SetName
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	MusicVol = Global.MusicVol
 	Border = Global.border
 	BattleTheme = Global.BattleTheme
